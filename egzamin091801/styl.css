@@ -1,0 +1,50 @@
+a:link{
+	color: yellow;
+}
+
+body {
+	font-family: Arial;
+	color: white;
+}
+
+#baner {
+	background-color: #5957a1;
+	text-align: center;
+	height: 70px;
+	padding: 10px;
+}
+
+#panel_l {
+	background-color: #bbadcd;
+	width: 65%;
+	height: 450px;
+	overflow: scroll;
+	float: left;
+}
+
+table, tr, td {
+	border: 1px dashed black;
+}
+
+#panel_p {
+	background-color: #5957a1;
+	text-align: center;
+	width: 35%;
+	height: 450px;
+	float: right;
+}
+
+#panel_p hr {
+	color: yellow;
+}
+
+#panel_p ul {
+	list-style-type: square;
+}
+
+#stopka {
+	background-color: #5957a1;
+	text-align: center;
+	height: 50px;
+	clear: both;
+}

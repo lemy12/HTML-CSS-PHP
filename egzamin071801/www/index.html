@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Szkoła ponadgimnazjalna</title>
+		<link rel="stylesheet" type="text/css" href="styl.css"></link>
+	</head>
+	<body>
+		<div class="baner">
+			<h2>Projekt strony internetowej szkoły ponadgimnazjalnej</h2>
+		</div>
+			
+		<div class="panel_l">
+			<h3>Do pobrania</h3>
+			<ul>
+				<li><a href="../baza/zapytania.txt">zapytania SQL</a></li>
+				<li><a href="../baza/szkolanew.sql">baza danych</a></li>
+			</ul>
+		</div>
+		
+		<div class="panel_s">
+			<table>
+				<tr>
+					<td>Treść zapytania</td>
+					<td style="width:405px;">Zrzut ekrany</td>
+				</tr>
+				<tr>
+					<td>INSERT INTO uczen VALUES ("27","Wiktoria","Jasny","1")</td>
+					<td style="width:405px;"><img src="kwerenda1.jpg" alt="kwerenda1.jpg"></img></td>
+				</tr>
+				<tr>
+					<td>SELECT imie, nazwisko FROM wychowawca JOIN uczen ON wychowawca.id_klasy=uczen.id_klasy WHERE uczen.nazwisko="Markiewicz"</td>
+					<td style="width:405px;"><img src="kwerenda2.jpg" alt="kwerenda2.jpg"></img></td>
+				</tr>
+				<tr>
+					<td>CREATE USER Jan_Bogucki@localhost IDENTIFIED BY "jb_123"</td>
+					<td style="width:405px;"><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik.jpg"></img></td>
+				</tr>
+				<tr>
+					<td>GRANT SELECT, INSERT, DELETE ON szkolanew.uczen TO Jan_Bogucki@localhost</td>
+					<td style="width:405px;"><img src="uprawnienia.jpg" alt="uprawnienia.jpg"></img></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="panel_p">
+			<h4>Obliczanie średniej ocen</h4>
+			<ul>
+				<li>Polak<input type="text" id="polak"></input></li>
+				<li>Nowak<input type="text" id="nowak"></input></li>
+				<li>Rysik<input type="text" id="rysik"></input></li>
+			</ul>
+			<input type="button" value="oblicz" onclick="oblicz()"></input>
+			<h4>Średnia ocen:</h4>
+			<div id="wynik"></div>
+		</div>
+		
+		<div class="stopka">
+			<h5>Autor strony: 11223344556</h5>
+		</div>
+		
+		<script>
+			function oblicz(){
+				var x = parseInt(document.getElementById("polak").value);
+				var y = parseInt(document.getElementById("nowak").value);
+				var z = parseInt(document.getElementById("rysik").value);
+				if(isNaN(x) || isNaN(y) || isNaN(z)){
+					alert("wpisz poprawne dane");}
+				else{
+					document.getElementById("wynik").innerHTML = (x+y+z)/3;}	
+				}
+		</script>
+	</body>
+</html>

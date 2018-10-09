@@ -1,0 +1,4 @@
+Kw1: INSERT INTO ogloszenie (uzytkownik_id, kategoria, podkategoria, tytul, tresc) VALUES ("1","2","0","Celine Dion","Sprzedam CD piosenkarki")
+Kw2: SELECT tytul, tresc FROM ogloszenie WHERE kategoria="1" AND podkategoria="13"
+Kw3: CREATE USER andrzej@localhost IDENTIFIED BY "xsw23"
+Kw4: GRANT SELECT, ALTER ON ogloszenia.ogloszenie TO andrzej@localhost

@@ -1,0 +1,4 @@
+kwerenda 1: INSERT INTO klasa VALUES ('5','3a','')
+kwerenda 2: SELECT AVG(srednia_ocen), nazwa FROM uczen JOIN klasa ON uczen.id_klasy=klasa.id GROUP BY nazwa
+kwerenda 3: CREATE USER dyrektor@localhost IDENTIFIED BY 'dyr_123'
+kwerenda 4: GRANT ALL ON szkola.* TO dyrektor@localhost

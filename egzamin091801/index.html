@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Szkoła ponadgimnazjalna</title>
+		<link rel="stylesheet" type="text/css" href="styl.css">
+	</head>
+	
+	<body>
+		<div id="baner"><h1>Projekt strony internetowej szkoły ponadgimnazjalnej</h1></div>
+		
+		<div id="panel_l">
+			<table>
+				<tr>
+					<td>Treść zapytania</td>
+					<td>Zrzut ekranu</td>
+				</tr>
+				<tr>
+					<td>INSERT INTO klasa VALUES ('5','3a','')</td>
+					<td style="width:405px;"><img src="obraz1.jpg" alt="obraz1.jpeg"></img></td>
+				</tr>
+				<tr>
+					<td>SELECT AVG(srednia_ocen), nazwa FROM uczen JOIN klasa ON uczen.id_klasy=klasa.id GROUP BY nazwa</td>
+					<td><img src="obraz2.jpg" alt="obraz2.jpeg"></img></td>
+				</tr>
+				<tr>
+					<td>CREATE USER dyrektor@localhost IDENTIFIED BY 'dyr_123'</td>
+					<td><img src="obraz3.jpg" alt="obraz3.jpeg"></img></td>
+				</tr>
+				<tr>
+					<td>GRANT ALL ON szkola.* TO dyrektor@localhost</td>
+					<td><img src="obraz4.jpg" alt="obraz4.jpeg"></img></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="panel_p">
+			<h2>Do pobrania</h2>
+			<ul>
+				<li><a href="zapytania.txt">zapytania sql</a></li>
+				<li><a href="szkola_nowa.sql">baza danych</a></li>
+			</ul>
+			<hr>
+			<h3>Wyznaczanie najniższej średniej</h3>
+			<ul>
+				<li>Polak<input type="textbox" id="polak"></input></li>
+				<li>Nowak<input type="textbox" id="nowak"></input></li>
+				<li>Rysik<input type="textbox" id="rysik"></input></li>
+			</ul>
+			<input type="button" name="wyznacz" value="Wyznacz" onclick="min_avg()"></input>
+			<h3>Najniższa średnia</h3>
+			<div id="wynik"></div>
+		</div>
+		<div id="stopka">
+			<h3>Stronę wykonał: 11223344556</h3>
+		</div>
+		
+		<script>
+			function min_avg(){
+				var x = parseFloat(document.getElementById("polak").value);
+				var y = parseFloat(document.getElementById("nowak").value);
+				var z = parseFloat(document.getElementById("rysik").value);
+				if(isNaN(x) || isNaN(y) || isNaN(z)){
+					alert("Wpisz poprawne dane");
+				}
+				else{
+					document.getElementById("wynik").innerHTML = Math.min(x,y,z);
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

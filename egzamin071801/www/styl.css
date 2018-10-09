@@ -1,0 +1,51 @@
+* {
+	font-family: Verdana;
+}
+
+a {
+	color: brown;
+}
+
+.baner, .stopka, .panel_l, .panel_p {
+	background-color: #ffb31c;
+}
+
+.panel_p {
+	text-align: right;
+}
+
+.panel_s {
+	background-color: #ffcb71;
+	width: 60%;
+	overflow: scroll;
+}
+
+.baner, .stopka {
+	text-align: center;
+}
+
+.panel_l, .panel_p {
+	width: 20%;
+	list-style-type: square;
+}
+
+.panel_l, .panel_p, .panel_s {
+	height: 480px;
+	float: left;
+}
+
+.baner {
+	height: 60px;
+}
+
+.stopka {
+	height: 30px;
+}
+
+ul {
+	list-style-type: square;
+}
+
+table, tr, td {
+	border: 1px solid black;
+}
